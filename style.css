@@ -1,0 +1,160 @@
+/* colors */
+:root {
+  --ink: #252d3d;
+  --blue: #f90000;
+  --soft: #d6caca;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--ink);
+  background-color: #d6caca;
+}
+
+/* ---------- navbar ---------- */
+.brand {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--blue);
+}
+
+/* ---------- hero ---------- */
+.hero {
+  padding: 5rem 0;
+  background-color: var(--soft);
+}
+
+.hero-title {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  font-size: 1.15rem;
+  max-width: 480px;
+  margin-bottom: 1.5rem;
+}
+
+/* three tiles in the hero */
+.hero-tiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.tile {
+  border-radius: 16px;
+  padding: 1.4rem;
+  background-color:  #c3ffe2;
+  border: 2px solid var(--ink);
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.tile-big {
+  grid-row: span 2;
+  background-color: var(--blue);
+  color: white;
+  border-color: var(--blue);
+  font-size: 1.4rem;
+}
+
+.tile-dark {
+  background-color: var(--ink);
+  color: white;
+}
+/* ---------- red only for "Shop now" and the cart count ---------- */
+.hero .btn-primary {
+  --bs-btn-bg: var(--blue);
+  --bs-btn-border-color: var(--blue);
+  --bs-btn-hover-bg: #c40000;
+  --bs-btn-hover-border-color: #c40000;
+  --bs-btn-active-bg: #a80000;
+  --bs-btn-active-border-color: #a80000;
+}
+
+#cartCount {
+  background-color: var(--blue) !important;
+}
+/* ---------- headings ---------- */
+.section-heading {
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+}
+
+/* ---------- products ---------- */
+.product-card {
+  border: 1px solid #dde3ef;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.product-img {
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+}
+
+/* different color for every product picture */
+.c1 { background-color: #141927; }
+.c2 { background-color: #2d4341; }
+.c3 { background-color: #8d5021; }
+.c4 { background-color: #6d28d9; }
+.c5 { background-color: #be123c; }
+.c6 { background-color: #00900a; }
+
+.price {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.old-price {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+/* button text changes after adding to cart */
+.add-btn.added {
+  background-color: #15803d;
+  border-color: #15803d;
+}
+
+/* ---------- newsletter ---------- */
+.offer {
+  background-color: var(--ink);
+}
+
+.msg-error { color: #fca5a5; }
+.msg-ok { color: #86efac; }
+
+/* ---------- footer ---------- */
+footer {
+  background-color: #fffefe;
+  border-top: 1px solid #a7a7a7;
+}
+
+/* ---------- small screens ---------- */
+@media (max-width: 576px) {
+  .hero { padding: 3rem 0; }
+  .tile-big { font-size: 1.1rem; }
+}
+/* ---------- cart panel ---------- */
+.cart-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #dde3ef;
+}
